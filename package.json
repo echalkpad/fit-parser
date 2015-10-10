@@ -1,0 +1,35 @@
+{
+  "name": "fit-parser",
+  "version": "0.0.0",
+  "description": "FIT files parser",
+  "devDependencies": {
+    "babel-jest": "^5.3.0",
+    "coveralls": "^2.11.4",
+    "jest-cli": "^0.5.10"
+  },
+  "scripts": {
+    "test": "jest ./src",
+    "watch": "jest --watch ./src",
+    "ci-travis": "jest ./src && coveralls < coverage/lcov.info"
+  },
+  "keywords": [
+    "FIT",
+    "Garmin",
+    "ANT",
+    "parser"
+  ],
+  "homepage": "https://github.com/silentroach/fit-parser",
+  "bugs": "https://github.com/silentroach/fit-parser/issues",
+  "author": "Igor Kalashnikov <igor.kalashnikov@me.com>",
+  "license": "MIT",
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "coverageReporters": [
+      "lcov"
+    ],
+    "preprocessorIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverage": true
+  }
+}
