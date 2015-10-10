@@ -26,4 +26,15 @@ describe('Header', () => {
 		expect(header.crc).toBe(33794);
 	});
 
+	it('should throw an error on wrong data type', () => {
+		const content = new Buffer([
+			14, 16, 135, 0, 28, 43, 0, 0,
+			46, 70, 0, 84, // data type
+			2, 132
+		]);
+		const reader = new Reader(content);
+
+		expect(() => Header.parse(reader)).toThrow();
+	});
+
 });
