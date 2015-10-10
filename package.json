@@ -10,7 +10,7 @@
   "scripts": {
     "test": "jest ./src",
     "watch": "jest --watch ./src",
-    "ci-travis": "jest ./src && coveralls < coverage/lcov.info"
+    "ci-travis": "jest --coverage ./src && coveralls < coverage/lcov.info"
   },
   "keywords": [
     "FIT",
@@ -30,6 +30,6 @@
     "preprocessorIgnorePatterns": [
       "/node_modules/"
     ],
-    "collectCoverage": true
+    "verbose": true
   }
 }
