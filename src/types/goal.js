@@ -8,14 +8,16 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'time',
+	1: 'distance',
+	2: 'calories',
+	3: 'frequency',
+	4: 'steps'
+};
+
 module.exports = class Goal extends BaseType {
 	static getValues() {
-		return {
-			0: 'time',
-			1: 'distance',
-			2: 'calories',
-			3: 'frequency',
-			4: 'steps'
-		};
+		return ValuesMap;
 	}
-}
+};

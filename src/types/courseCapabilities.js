@@ -8,20 +8,22 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	1: 'processed',
+	2: 'valid',
+	4: 'time',
+	8: 'distance',
+	16: 'position',
+	32: 'heart_rate',
+	64: 'power',
+	128: 'cadence',
+	256: 'training',
+	512: 'navigation',
+	1024: 'bikeway'
+};
+
 module.exports = class CourseCapabilities extends BaseType {
 	static getValues() {
-		return {
-			1: 'processed',
-			2: 'valid',
-			4: 'time',
-			8: 'distance',
-			16: 'position',
-			32: 'heart_rate',
-			64: 'power',
-			128: 'cadence',
-			256: 'training',
-			512: 'navigation',
-			1024: 'bikeway'
-		};
+		return ValuesMap;
 	}
-}
+};

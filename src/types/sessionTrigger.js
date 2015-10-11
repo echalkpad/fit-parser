@@ -8,13 +8,15 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'activity_end',
+	1: 'manual',            // User changed sport.
+	2: 'auto_multi_sport',  // Auto multi-sport feature is enabled and user pressed lap button to advance session.
+	3: 'fitness_equipment'  // Auto sport change caused by user linking to fitness equipment.
+};
+
 module.exports = class SessionTrigger extends BaseType {
 	static getValues() {
-		return {
-			0: 'activity_end',
-			1: 'manual',            // User changed sport.
-			2: 'auto_multi_sport',  // Auto multi-sport feature is enabled and user pressed lap button to advance session.
-			3: 'fitness_equipment'  // Auto sport change caused by user linking to fitness equipment.
-		};
+		return ValuesMap;
 	}
-}
+};

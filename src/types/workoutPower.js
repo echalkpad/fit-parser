@@ -8,10 +8,12 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	1000: 'watts_offset'
+};
+
 module.exports = class WorkoutPower extends BaseType {
 	static getValues() {
-		return {
-			1000: 'watts_offset'
-		};
+		return ValuesMap;
 	}
-}
+};

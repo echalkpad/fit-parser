@@ -8,12 +8,14 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	32768: 'selected', // message is selected if set
+	28672: 'reserved', // reserved (default 0)
+	4095: 'mask'       // index
+};
+
 module.exports = class MessageIndex extends BaseType {
 	static getValues() {
-		return {
-			32768: 'selected', // message is selected if set
-			28672: 'reserved', // reserved (default 0)
-			4095: 'mask'       // index
-		};
+		return ValuesMap;
 	}
-}
+};

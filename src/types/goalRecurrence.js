@@ -8,15 +8,17 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'off',
+	1: 'daily',
+	2: 'weekly',
+	3: 'monthly',
+	4: 'yearly',
+	5: 'custom'
+};
+
 module.exports = class GoalRecurrence extends BaseType {
 	static getValues() {
-		return {
-			0: 'off',
-			1: 'daily',
-			2: 'weekly',
-			3: 'monthly',
-			4: 'yearly',
-			5: 'custom'
-		};
+		return ValuesMap;
 	}
-}
+};

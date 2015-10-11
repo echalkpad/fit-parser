@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'normal',
+	1: 'irregular'
+};
+
 module.exports = class HrType extends BaseType {
 	static getValues() {
-		return {
-			0: 'normal',
-			1: 'irregular'
-		};
+		return ValuesMap;
 	}
-}
+};

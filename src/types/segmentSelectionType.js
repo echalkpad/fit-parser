@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'starred',
+	1: 'suggested'
+};
+
 module.exports = class SegmentSelectionType extends BaseType {
 	static getValues() {
-		return {
-			0: 'starred',
-			1: 'suggested'
-		};
+		return ValuesMap;
 	}
-}
+};

@@ -8,13 +8,15 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'public',
+	1: 'antplus',
+	2: 'antfs',
+	3: 'private'
+};
+
 module.exports = class AntNetwork extends BaseType {
 	static getValues() {
-		return {
-			0: 'public',
-			1: 'antplus',
-			2: 'antfs',
-			3: 'private'
-		};
+		return ValuesMap;
 	}
-}
+};

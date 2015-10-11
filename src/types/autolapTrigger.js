@@ -8,16 +8,18 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'time',
+	1: 'distance',
+	2: 'position_start',
+	3: 'position_lap',
+	4: 'position_waypoint',
+	5: 'position_marked',
+	6: 'off'
+};
+
 module.exports = class AutolapTrigger extends BaseType {
 	static getValues() {
-		return {
-			0: 'time',
-			1: 'distance',
-			2: 'position_start',
-			3: 'position_lap',
-			4: 'position_waypoint',
-			5: 'position_marked',
-			6: 'off'
-		};
+		return ValuesMap;
 	}
-}
+};

@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'clear', // Allows clear of checksum for flash memory where can only write 1 to 0 without erasing sector.
+	1: 'ok'     // Set to mark checksum as valid if computes to invalid values 0 or 0xFF.  Checksum can also be set to ok to save encoding computation time.
+};
+
 module.exports = class Checksum extends BaseType {
 	static getValues() {
-		return {
-			0: 'clear', // Allows clear of checksum for flash memory where can only write 1 to 0 without erasing sector.
-			1: 'ok'     // Set to mark checksum as valid if computes to invalid values 0 or 0xFF.  Checksum can also be set to ok to save encoding computation time.
-		};
+		return ValuesMap;
 	}
-}
+};

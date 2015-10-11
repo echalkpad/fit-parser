@@ -8,12 +8,14 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'custom',
+	1: 'percent_max_hr',
+	2: 'percent_hrr'
+};
+
 module.exports = class HrZoneCalc extends BaseType {
 	static getValues() {
-		return {
-			0: 'custom',
-			1: 'percent_max_hr',
-			2: 'percent_hrr'
-		};
+		return ValuesMap;
 	}
-}
+};

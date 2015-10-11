@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'idle',   // Rest period. Length with no strokes
+	1: 'active'  // Length with strokes.
+};
+
 module.exports = class LengthType extends BaseType {
 	static getValues() {
-		return {
-			0: 'idle',   // Rest period. Length with no strokes
-			1: 'active'  // Length with strokes.
-		};
+		return ValuesMap;
 	}
-}
+};

@@ -8,10 +8,12 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	65534: 'calculating'
+};
+
 module.exports = class Weight extends BaseType {
 	static getValues() {
-		return {
-			65534: 'calculating'
-		};
+		return ValuesMap;
 	}
-}
+};

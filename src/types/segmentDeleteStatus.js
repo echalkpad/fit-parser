@@ -8,12 +8,14 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'do_not_delete',
+	1: 'delete_one',
+	2: 'delete_all'
+};
+
 module.exports = class SegmentDeleteStatus extends BaseType {
 	static getValues() {
-		return {
-			0: 'do_not_delete',
-			1: 'delete_one',
-			2: 'delete_all'
-		};
+		return ValuesMap;
 	}
-}
+};

@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'manual',
+	1: 'auto_multi_sport'
+};
+
 module.exports = class Activity extends BaseType {
 	static getValues() {
-		return {
-			0: 'manual',
-			1: 'auto_multi_sport'
-		};
+		return ValuesMap;
 	}
-}
+};

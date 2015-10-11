@@ -8,17 +8,19 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'generic',
+	1: 'running',
+	2: 'cycling',
+	3: 'transition',        // Mulitsport transition
+	4: 'fitness_equipment',
+	5: 'swimming',
+	6: 'walking',
+	254: 'all'              // All is for goals only to include all sports.
+};
+
 module.exports = class ActivityType extends BaseType {
 	static getValues() {
-		return {
-			0: 'generic',
-			1: 'running',
-			2: 'cycling',
-			3: 'transition',        // Mulitsport transition
-			4: 'fitness_equipment',
-			5: 'swimming',
-			6: 'walking',
-			254: 'all'              // All is for goals only to include all sports.
-		};
+		return ValuesMap;
 	}
-}
+};

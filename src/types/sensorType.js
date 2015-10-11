@@ -8,12 +8,14 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'accelerometer',
+	1: 'gyroscope',
+	2: 'compass'
+};
+
 module.exports = class SensorType extends BaseType {
 	static getValues() {
-		return {
-			0: 'accelerometer',
-			1: 'gyroscope',
-			2: 'compass'
-		};
+		return ValuesMap;
 	}
-}
+};

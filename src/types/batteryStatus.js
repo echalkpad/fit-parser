@@ -8,15 +8,17 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	1: 'new',
+	2: 'good',
+	3: 'ok',
+	4: 'low',
+	5: 'critical',
+	7: 'unknown'
+};
+
 module.exports = class BatteryStatus extends BaseType {
 	static getValues() {
-		return {
-			1: 'new',
-			2: 'good',
-			3: 'ok',
-			4: 'low',
-			5: 'critical',
-			7: 'unknown'
-		};
+		return ValuesMap;
 	}
-}
+};

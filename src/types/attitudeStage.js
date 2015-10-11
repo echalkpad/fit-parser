@@ -8,13 +8,15 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'failed',
+	1: 'aligning',
+	2: 'degraded',
+	3: 'valid'
+};
+
 module.exports = class AttitudeStage extends BaseType {
 	static getValues() {
-		return {
-			0: 'failed',
-			1: 'aligning',
-			2: 'degraded',
-			3: 'valid'
-		};
+		return ValuesMap;
 	}
-}
+};

@@ -8,17 +8,19 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	1: 'driving',
+	2: 'golf',
+	4: 'hang_gliding',
+	8: 'horseback_riding',
+	16: 'hunting',
+	32: 'fishing',
+	64: 'inline_skating',
+	128: 'rock_climbing'
+};
+
 module.exports = class SportBits3 extends BaseType {
 	static getValues() {
-		return {
-			1: 'driving',
-			2: 'golf',
-			4: 'hang_gliding',
-			8: 'horseback_riding',
-			16: 'hunting',
-			32: 'fishing',
-			64: 'inline_skating',
-			128: 'rock_climbing'
-		};
+		return ValuesMap;
 	}
-}
+};

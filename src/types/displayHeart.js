@@ -8,12 +8,14 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'bpm',
+	1: 'max',
+	2: 'reserve'
+};
+
 module.exports = class DisplayHeart extends BaseType {
 	static getValues() {
-		return {
-			0: 'bpm',
-			1: 'max',
-			2: 'reserve'
-		};
+		return ValuesMap;
 	}
-}
+};

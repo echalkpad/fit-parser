@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	127: 'mask',  // % contribution
+	128: 'right'  // data corresponds to right if set, otherwise unknown
+};
+
 module.exports = class LeftRightBalance extends BaseType {
 	static getValues() {
-		return {
-			127: 'mask',  // % contribution
-			128: 'right'  // data corresponds to right if set, otherwise unknown
-		};
+		return ValuesMap;
 	}
-}
+};

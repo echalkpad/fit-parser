@@ -8,17 +8,19 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	1: 'generic',
+	2: 'running',
+	4: 'cycling',
+	8: 'transition',         // Mulitsport transition
+	16: 'fitness_equipment',
+	32: 'swimming',
+	64: 'basketball',
+	128: 'soccer'
+};
+
 module.exports = class SportBits0 extends BaseType {
 	static getValues() {
-		return {
-			1: 'generic',
-			2: 'running',
-			4: 'cycling',
-			8: 'transition',         // Mulitsport transition
-			16: 'fitness_equipment',
-			32: 'swimming',
-			64: 'basketball',
-			128: 'soccer'
-		};
+		return ValuesMap;
 	}
-}
+};

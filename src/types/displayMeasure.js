@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'metric',
+	1: 'statute'
+};
+
 module.exports = class DisplayMeasure extends BaseType {
 	static getValues() {
-		return {
-			0: 'metric',
-			1: 'statute'
-		};
+		return ValuesMap;
 	}
-}
+};

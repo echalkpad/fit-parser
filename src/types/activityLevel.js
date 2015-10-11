@@ -8,12 +8,14 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'low',
+	1: 'medium',
+	2: 'high'
+};
+
 module.exports = class ActivityLevel extends BaseType {
 	static getValues() {
-		return {
-			0: 'low',
-			1: 'medium',
-			2: 'high'
-		};
+		return ValuesMap;
 	}
-}
+};

@@ -8,12 +8,14 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'manual',
+	1: 'auto',
+	2: 'fitness_equipment'
+};
+
 module.exports = class TimerTrigger extends BaseType {
 	static getValues() {
-		return {
-			0: 'manual',
-			1: 'auto',
-			2: 'fitness_equipment'
-		};
+		return ValuesMap;
 	}
-}
+};

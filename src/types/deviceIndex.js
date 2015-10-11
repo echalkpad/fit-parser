@@ -8,10 +8,12 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'creator'  // Creator of the file is always device index 0.
+};
+
 module.exports = class DeviceIndex extends BaseType {
 	static getValues() {
-		return {
-			0: 'creator'  // Creator of the file is always device index 0.
-		};
+		return ValuesMap;
 	}
-}
+};

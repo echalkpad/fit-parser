@@ -8,15 +8,17 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'local_min',
+	15: 'local_max',
+	16: 'stationary_min',
+	255: 'stationary_max',
+	256: 'portable_min',
+	65534: 'portable_max'
+};
+
 module.exports = class UserLocalId extends BaseType {
 	static getValues() {
-		return {
-			0: 'local_min',
-			15: 'local_max',
-			16: 'stationary_min',
-			255: 'stationary_max',
-			256: 'portable_min',
-			65534: 'portable_max'
-		};
+		return ValuesMap;
 	}
-}
+};

@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'custom',
+	1: 'percent_ftp'
+};
+
 module.exports = class PwrZoneCalc extends BaseType {
 	static getValues() {
-		return {
-			0: 'custom',
-			1: 'percent_ftp'
-		};
+		return ValuesMap;
 	}
-}
+};

@@ -8,10 +8,12 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	100: 'bpm_offset'
+};
+
 module.exports = class WorkoutHr extends BaseType {
 	static getValues() {
-		return {
-			100: 'bpm_offset'
-		};
+		return ValuesMap;
 	}
-}
+};

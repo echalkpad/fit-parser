@@ -8,12 +8,14 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	2: 'read',
+	4: 'write',
+	8: 'erase'
+};
+
 module.exports = class FileFlags extends BaseType {
 	static getValues() {
-		return {
-			2: 'read',
-			4: 'write',
-			8: 'erase'
-		};
+		return ValuesMap;
 	}
-}
+};

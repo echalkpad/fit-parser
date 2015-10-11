@@ -8,19 +8,21 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'start',
+	1: 'stop',
+	2: 'consecutive_depreciated',
+	3: 'marker',
+	4: 'stop_all',
+	5: 'begin_depreciated',
+	6: 'end_depreciated',
+	7: 'end_all_depreciated',
+	8: 'stop_disable',
+	9: 'stop_disable_all'
+};
+
 module.exports = class EventType extends BaseType {
 	static getValues() {
-		return {
-			0: 'start',
-			1: 'stop',
-			2: 'consecutive_depreciated',
-			3: 'marker',
-			4: 'stop_all',
-			5: 'begin_depreciated',
-			6: 'end_depreciated',
-			7: 'end_all_depreciated',
-			8: 'stop_disable',
-			9: 'stop_disable_all'
-		};
+		return ValuesMap;
 	}
-}
+};

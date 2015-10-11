@@ -8,15 +8,17 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'no_event',
+	1: 'other',    // stroke was detected but cannot be identified
+	2: 'serve',
+	3: 'forehand',
+	4: 'backhand',
+	5: 'smash'
+};
+
 module.exports = class StrokeType extends BaseType {
 	static getValues() {
-		return {
-			0: 'no_event',
-			1: 'other',    // stroke was detected but cannot be identified
-			2: 'serve',
-			3: 'forehand',
-			4: 'backhand',
-			5: 'smash'
-		};
+		return ValuesMap;
 	}
-}
+};

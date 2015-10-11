@@ -8,29 +8,31 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'generic',
+	1: 'treadmill',       // Run
+	2: 'street',          // Run
+	3: 'trail',           // Run
+	4: 'track',           // Run
+	5: 'spin',            // Cycling
+	6: 'indoor_cycling',  // Cycling
+	7: 'road',            // Cycling
+	8: 'mountain',        // Cycling
+	9: 'downhill',        // Cycling
+	10: 'recumbent',      // Cycling
+	11: 'cyclocross',     // Cycling
+	12: 'hand_cycling',   // Cycling
+	13: 'track_cycling',  // Cycling
+	14: 'indoor_rowing',  // Fitness Equipment
+	15: 'elliptical',     // Fitness Equipment
+	16: 'stair_climbing', // Fitness Equipment
+	17: 'lap_swimming',   // Swimming
+	18: 'open_water',     // Swimming
+	254: 'all'
+};
+
 module.exports = class ActivitySubtype extends BaseType {
 	static getValues() {
-		return {
-			0: 'generic',
-			1: 'treadmill',       // Run
-			2: 'street',          // Run
-			3: 'trail',           // Run
-			4: 'track',           // Run
-			5: 'spin',            // Cycling
-			6: 'indoor_cycling',  // Cycling
-			7: 'road',            // Cycling
-			8: 'mountain',        // Cycling
-			9: 'downhill',        // Cycling
-			10: 'recumbent',      // Cycling
-			11: 'cyclocross',     // Cycling
-			12: 'hand_cycling',   // Cycling
-			13: 'track_cycling',  // Cycling
-			14: 'indoor_rowing',  // Fitness Equipment
-			15: 'elliptical',     // Fitness Equipment
-			16: 'stair_climbing', // Fitness Equipment
-			17: 'lap_swimming',   // Swimming
-			18: 'open_water',     // Swimming
-			254: 'all'
-		};
+		return ValuesMap;
 	}
-}
+};

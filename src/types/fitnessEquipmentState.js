@@ -8,13 +8,15 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'ready',
+	1: 'in_use',
+	2: 'paused',
+	3: 'unknown'  // lost connection to fitness equipment
+};
+
 module.exports = class FitnessEquipmentState extends BaseType {
 	static getValues() {
-		return {
-			0: 'ready',
-			1: 'in_use',
-			2: 'paused',
-			3: 'unknown'  // lost connection to fitness equipment
-		};
+		return ValuesMap;
 	}
-}
+};

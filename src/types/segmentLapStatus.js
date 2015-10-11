@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'end',
+	1: 'fail'
+};
+
 module.exports = class SegmentLapStatus extends BaseType {
 	static getValues() {
-		return {
-			0: 'end',
-			1: 'fail'
-		};
+		return ValuesMap;
 	}
-}
+};

@@ -8,16 +8,18 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'speed',
+	1: 'heart_rate',
+	2: 'open',
+	3: 'cadence',
+	4: 'power',
+	5: 'grade',
+	6: 'resistance'
+};
+
 module.exports = class WktStepTarget extends BaseType {
 	static getValues() {
-		return {
-			0: 'speed',
-			1: 'heart_rate',
-			2: 'open',
-			3: 'cadence',
-			4: 'power',
-			5: 'grade',
-			6: 'resistance'
-		};
+		return ValuesMap;
 	}
-}
+};

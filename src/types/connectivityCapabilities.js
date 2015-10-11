@@ -8,23 +8,25 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	1: 'bluetooth',
+	2: 'bluetooth_le',
+	4: 'ant',
+	8: 'activity_upload',
+	16: 'course_download',
+	32: 'workout_download',
+	64: 'live_track',
+	128: 'weather_conditions',
+	256: 'weather_alerts',
+	512: 'gps_ephemeris_download',
+	1024: 'explicit_archive',
+	2048: 'setup_incomplete',
+	4096: 'continue_sync_after_software_update',
+	8192: 'connect_iq_app_download'
+};
+
 module.exports = class ConnectivityCapabilities extends BaseType {
 	static getValues() {
-		return {
-			1: 'bluetooth',
-			2: 'bluetooth_le',
-			4: 'ant',
-			8: 'activity_upload',
-			16: 'course_download',
-			32: 'workout_download',
-			64: 'live_track',
-			128: 'weather_conditions',
-			256: 'weather_alerts',
-			512: 'gps_ephemeris_download',
-			1024: 'explicit_archive',
-			2048: 'setup_incomplete',
-			4096: 'continue_sync_after_software_update',
-			8192: 'connect_iq_app_download'
-		};
+		return ValuesMap;
 	}
-}
+};

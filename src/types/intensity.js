@@ -8,13 +8,15 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'active',
+	1: 'rest',
+	2: 'warmup',
+	3: 'cooldown'
+};
+
 module.exports = class Intensity extends BaseType {
 	static getValues() {
-		return {
-			0: 'active',
-			1: 'rest',
-			2: 'warmup',
-			3: 'cooldown'
-		};
+		return ValuesMap;
 	}
-}
+};

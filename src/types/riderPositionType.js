@@ -8,11 +8,13 @@
 
 const BaseType = require('../type');
 
+const ValuesMap = {
+	0: 'seated',
+	1: 'standing'
+};
+
 module.exports = class RiderPositionType extends BaseType {
 	static getValues() {
-		return {
-			0: 'seated',
-			1: 'standing'
-		};
+		return ValuesMap;
 	}
-}
+};
