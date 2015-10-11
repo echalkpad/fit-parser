@@ -34,6 +34,20 @@ describe('Buffer reader', () => {
 		expect(reader.pos).toBe(3);
 	});
 
+	it('should return 16 bit unsigned int on [UInt16BE] call', () => {
+		const res = reader.UInt16BE();
+
+		expect(res).toBe(29797);
+		expect(reader.pos).toBe(2);
+	});
+
+	it('should return 32 bit unsigned int on [UInt32BE] call', () => {
+		const res = reader.UInt32BE();
+
+		expect(res).toBe(1952805748);
+		expect(reader.pos).toBe(4);
+	});
+
 	it('should return 16 bit unsigned int on [UInt16LE] call', () => {
 		const res = reader.UInt16LE();
 
