@@ -1,3 +1,5 @@
+'use strict';
+
 jest.dontMock('../reader');
 jest.dontMock('../header');
 

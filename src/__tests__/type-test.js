@@ -1,3 +1,5 @@
+'use strict';
+
 jest.dontMock('../type');
 
 const BaseType = require('../type');
