@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	1: 'antfs',
@@ -31,5 +32,9 @@ const ValuesMap = {
 module.exports = class AntplusDeviceType extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt8;
 	}
 };

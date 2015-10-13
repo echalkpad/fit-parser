@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	0: 'num_per_file',
@@ -17,5 +18,9 @@ const ValuesMap = {
 module.exports = class MesgCount extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.Enum;
 	}
 };

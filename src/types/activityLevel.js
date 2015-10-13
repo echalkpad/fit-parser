@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	0: 'low',
@@ -17,5 +18,9 @@ const ValuesMap = {
 module.exports = class ActivityLevel extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.Enum;
 	}
 };

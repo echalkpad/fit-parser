@@ -18,4 +18,8 @@ module.exports = class Type {
 	static getValues() {
 		throw new Error('No values defined');
 	}
+
+	static getSourceType() {
+		throw new Error('No source type defined');
+	}
 }

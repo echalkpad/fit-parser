@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	0: 'public',
@@ -18,5 +19,9 @@ const ValuesMap = {
 module.exports = class AntNetwork extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.Enum;
 	}
 };

@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	0: 'manual',
@@ -17,5 +18,9 @@ const ValuesMap = {
 module.exports = class TimerTrigger extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.Enum;
 	}
 };

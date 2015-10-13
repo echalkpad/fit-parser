@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	1: 'bluetooth',
@@ -28,5 +29,9 @@ const ValuesMap = {
 module.exports = class ConnectivityCapabilities extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt32z;
 	}
 };

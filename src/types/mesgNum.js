@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	0: 'file_id',
@@ -77,5 +78,9 @@ const ValuesMap = {
 module.exports = class MesgNum extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt16;
 	}
 };

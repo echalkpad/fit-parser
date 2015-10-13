@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	1: 'device',            // Read only, single file. Must be in root directory.
@@ -33,5 +34,9 @@ const ValuesMap = {
 module.exports = class File extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.Enum;
 	}
 };

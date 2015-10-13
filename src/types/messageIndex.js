@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	32768: 'selected', // message is selected if set
@@ -17,5 +18,9 @@ const ValuesMap = {
 module.exports = class MessageIndex extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt16;
 	}
 };

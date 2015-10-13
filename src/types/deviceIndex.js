@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	0: 'creator'  // Creator of the file is always device index 0.
@@ -15,5 +16,9 @@ const ValuesMap = {
 module.exports = class DeviceIndex extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt8;
 	}
 };

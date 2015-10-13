@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	127: 'mask',  // % contribution
@@ -16,5 +17,9 @@ const ValuesMap = {
 module.exports = class LeftRightBalance extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt8;
 	}
 };

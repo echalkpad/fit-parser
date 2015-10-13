@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	0: 'clear', // Allows clear of checksum for flash memory where can only write 1 to 0 without erasing sector.
@@ -16,5 +17,9 @@ const ValuesMap = {
 module.exports = class Checksum extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt8;
 	}
 };

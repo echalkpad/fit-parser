@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	1: 'water_skiing',
@@ -19,5 +20,9 @@ const ValuesMap = {
 module.exports = class SportBits5 extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt8z;
 	}
 };

@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	65534: 'calculating'
@@ -15,5 +16,9 @@ const ValuesMap = {
 module.exports = class Weight extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt16;
 	}
 };

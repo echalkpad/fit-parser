@@ -7,6 +7,7 @@
  */
 
 const BaseType = require('../type');
+const FieldTypes = require('../fieldTypes');
 
 const ValuesMap = {
 	1: 'track_angle_heading_valid',
@@ -27,5 +28,9 @@ const ValuesMap = {
 module.exports = class AttitudeValidity extends BaseType {
 	static getValues() {
 		return ValuesMap;
+	}
+
+	static getSourceType() {
+		return FieldTypes.UInt16;
 	}
 };
