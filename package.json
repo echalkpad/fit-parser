@@ -4,7 +4,8 @@
   "description": "FIT files parser",
   "devDependencies": {
     "coveralls": "^2.11.4",
-    "jest-cli": "^0.5.10"
+    "jest-cli": "^0.5.10",
+    "xlsx": "^0.8.0"
   },
   "scripts": {
     "test": "jest ./src",
