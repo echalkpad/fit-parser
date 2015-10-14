@@ -26,4 +26,3 @@ class MessageIndex extends BaseType {
 };
 
 module.exports = MessageIndex;
-

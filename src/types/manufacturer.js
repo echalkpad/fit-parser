@@ -130,4 +130,3 @@ class Manufacturer extends BaseType {
 };
 
 module.exports = Manufacturer;
-

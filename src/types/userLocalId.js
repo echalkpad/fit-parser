@@ -29,4 +29,3 @@ class UserLocalId extends BaseType {
 };
 
 module.exports = UserLocalId;
-

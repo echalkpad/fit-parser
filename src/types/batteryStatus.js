@@ -29,4 +29,3 @@ class BatteryStatus extends BaseType {
 };
 
 module.exports = BatteryStatus;
-

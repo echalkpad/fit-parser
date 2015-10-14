@@ -24,4 +24,3 @@ class WorkoutPower extends BaseType {
 };
 
 module.exports = WorkoutPower;
-

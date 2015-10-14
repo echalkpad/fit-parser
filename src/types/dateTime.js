@@ -24,4 +24,3 @@ class DateTime extends BaseType {
 };
 
 module.exports = DateTime;
-

@@ -26,4 +26,3 @@ class FileFlags extends BaseType {
 };
 
 module.exports = FileFlags;
-

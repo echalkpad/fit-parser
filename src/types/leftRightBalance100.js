@@ -25,4 +25,3 @@ class LeftRightBalance100 extends BaseType {
 };
 
 module.exports = LeftRightBalance100;
-

@@ -86,4 +86,3 @@ class MesgNum extends BaseType {
 };
 
 module.exports = MesgNum;
-

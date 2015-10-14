@@ -40,4 +40,3 @@ class AntplusDeviceType extends BaseType {
 };
 
 module.exports = AntplusDeviceType;
-

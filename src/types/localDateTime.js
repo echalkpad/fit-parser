@@ -24,4 +24,3 @@ class LocalDateTime extends BaseType {
 };
 
 module.exports = LocalDateTime;
-

@@ -148,4 +148,3 @@ class GarminProduct extends BaseType {
 };
 
 module.exports = GarminProduct;
-

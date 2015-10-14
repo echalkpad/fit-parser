@@ -36,4 +36,3 @@ class AttitudeValidity extends BaseType {
 };
 
 module.exports = AttitudeValidity;
-

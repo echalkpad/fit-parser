@@ -37,4 +37,3 @@ class ConnectivityCapabilities extends BaseType {
 };
 
 module.exports = ConnectivityCapabilities;
-

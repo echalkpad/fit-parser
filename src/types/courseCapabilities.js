@@ -34,4 +34,3 @@ class CourseCapabilities extends BaseType {
 };
 
 module.exports = CourseCapabilities;
-

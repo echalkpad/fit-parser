@@ -25,4 +25,3 @@ class Checksum extends BaseType {
 };
 
 module.exports = Checksum;
-

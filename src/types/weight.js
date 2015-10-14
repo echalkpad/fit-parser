@@ -24,4 +24,3 @@ class Weight extends BaseType {
 };
 
 module.exports = Weight;
-

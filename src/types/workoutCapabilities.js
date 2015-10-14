@@ -37,4 +37,3 @@ class WorkoutCapabilities extends BaseType {
 };
 
 module.exports = WorkoutCapabilities;
-

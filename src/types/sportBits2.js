@@ -31,4 +31,3 @@ class SportBits2 extends BaseType {
 };
 
 module.exports = SportBits2;
-

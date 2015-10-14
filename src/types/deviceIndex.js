@@ -24,4 +24,3 @@ class DeviceIndex extends BaseType {
 };
 
 module.exports = DeviceIndex;
-

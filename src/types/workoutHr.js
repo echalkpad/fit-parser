@@ -24,4 +24,3 @@ class WorkoutHr extends BaseType {
 };
 
 module.exports = WorkoutHr;
-
