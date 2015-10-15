@@ -30,4 +30,11 @@ describe('Base type', () => {
 		expect(Number(someUnknownValue)).toBe(someWrongKey);
 		expect(someUnknownValue.toString()).not.toBeDefined();
 	});
+
+	it('should throw on unimplemented methods call', () => {
+		class MyNewType extends BaseType { }
+
+		expect(() => MyNewType.getValues()).toThrow();
+		expect(() => MyNewType.getSourceType()).toThrow();
+	});
 });
