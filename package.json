@@ -7,6 +7,7 @@
     "jest-cli": "^0.5.10",
     "xlsx": "^0.8.0"
   },
+  "repository": "silentroach/fit-parser",
   "scripts": {
     "test": "jest ./src",
     "watch": "jest --watch ./src",
