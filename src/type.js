@@ -7,6 +7,10 @@ module.exports = class Type {
 		this[propValue] = value;
 	}
 
+	get value() {
+		return this[propValue];
+	}
+
 	valueOf() {
 		return this[propValue];
 	}

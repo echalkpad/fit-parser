@@ -20,7 +20,14 @@ describe('Base type', () => {
 		const someValue = new MyBaseType(testKey);
 
 		expect(Number(someValue)).toBe(testKey);
+		expect(someValue.value).toBe(testKey);
 		expect(String(someValue)).toBe(testValue);
+	});
+
+	it('should provide direct readonly access to its value', () => {
+		const someValue = new MyBaseType(testKey);
+		expect(someValue.value).toBe(testKey);
+		expect(someValue.value).toBe(Number(someValue));
 	});
 
 	it('should return undefined on unknown values', () => {
