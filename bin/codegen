@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const commander = require('commander');
+const codegen = require('../src/codegen');
+
+commander
+	.version(require('../package.json').version)
+	.description('Generate messages from FIT SDK Profile.xlsx')
+	.usage('<file>')
+	.parse(process.argv);
+
+if (1 !== commander.args.length) {
+	commander.outputHelp();
+	process.exit(0);
+}
+
+const profilePath = path.resolve(commander.args[0]);
+
+codegen(profilePath);
