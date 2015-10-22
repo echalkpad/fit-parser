@@ -4,7 +4,7 @@
   "description": "FIT files parser",
   "devDependencies": {
     "coveralls": "^2.11.4",
-    "jest-cli": "^0.5.10",
+    "jest-cli": "^0.6.0",
     "xlsx": "^0.8.0"
   },
   "repository": "silentroach/fit-parser",
