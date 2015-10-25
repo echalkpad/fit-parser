@@ -2,16 +2,6 @@
 
 const Field = require('./field');
 
-const Types = { };
-
-[
-	require('./messages/fileId'),
-	require('./messages/fileCreator'),
-	require('./messages/event'),
-	require('./messages/record')
-].forEach(TypeClass => {
-	Types[TypeClass.getId()] = TypeClass;
-});
 
 const TimestampFieldNumber = 253;
 
@@ -101,11 +91,11 @@ Field.TYPE_BYTE = 0x0D;
 		data[field.number] = value;
 	});
 
-	if (undefined === Types[type]) {
-		console.log('unknown', type, data);
-		return;
-		// throw new Error('Unknown message type', type);
-	}
+	// if (undefined === Types[type]) {
+	// 	console.log('unknown', type, data);
+	// 	return;
+	// 	// throw new Error('Unknown message type', type);
+	// }
 
-	return Types[type].create(data);
+	// return Types[type].create(data);
 };
