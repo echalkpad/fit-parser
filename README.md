@@ -4,4 +4,6 @@
 [![Coveralls](https://img.shields.io/coveralls/silentroach/fit-parser.svg?style=flat-square&label=coverage)](https://coveralls.io/r/silentroach/fit-parser)
 [![David](https://img.shields.io/david/dev/silentroach/fit-parser.svg?style=flat-square&label=deps)](https://david-dm.org/silentroach/fit-parser#info=devDependencies)
 
+ANT FIT format file parser.
+
 Work in progress.
